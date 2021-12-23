@@ -125,17 +125,17 @@ void setup()
   Serial.println("RESET");
   dfmp3.reset();
 
-  Serial.println("TRACK COUNT");
-  uint16_t count = dfmp3.getTotalTrackCount(DfMp3_PlaySource_Sd);
-  Serial.print("files ");
-  Serial.println(count);
+  // Serial.println("TRACK COUNT");
+  // uint16_t count = dfmp3.getTotalTrackCount(DfMp3_PlaySource_Sd);
+  // Serial.print("files ");
+  // Serial.println(count);
 
   Serial.println("Set volume 15"); 
   dfmp3.setVolume(15);
   delay(100);
 
-  Serial.println("Next"); 
-  dfmp3.nextTrack();
+  Serial.println("First play!"); 
+  dfmp3.playGlobalTrack(1);
   delay(100);
 
   Serial.println("Initialized.");
